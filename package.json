@@ -1,8 +1,8 @@
 {
   "name": "biga",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "primeralibreria",
-  "author": "Cifre Benja",
+  "author": "benjacifre10",
   "license": "MIT",
   "repository": "https://github.com/benjacifre10/biga.git",
   "main": "dist/index.js",

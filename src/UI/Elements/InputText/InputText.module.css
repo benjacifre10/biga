@@ -1,0 +1,158 @@
+.input__form_container {
+    width: 100%;
+}
+/* form */
+.input__form_container .input__form_icon {
+    width: 20px;
+    height: 50px;
+    color: #333;
+    float: right;
+    display: flex;
+    align-items: flex-end;
+}
+
+.input__form_icon i {
+    padding: 8px 0px;
+}
+
+.input__form {
+    width: 40%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.center {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.input__form input {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.input__form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #333;
+    color: #333;
+    font-style: italic;
+}
+
+.input__form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #b82e1f;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.content_name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.input__form input:focus + .label_name .content_name, 
+.input__form input:valid + .label_name .content_name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #b82e1f;
+}
+
+.input__form input:focus + .label_name::after,
+.input__form input:valid + .label_name::after {
+    transform: translateX(0%);
+}
+/* search */
+.input__form_container .input__search_icon {
+    width: 20px;
+    height: 50px;
+    color: #ccc;
+    float: right;
+    display: flex;
+    align-items: flex-end;
+}
+
+.input__search_icon i {
+    padding: 8px 0px;
+}
+
+.input__search {
+    width: 40%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.input__search input {
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.input__search label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid whitesmoke;
+    color: #ccc;
+    font-style: italic;
+}
+
+.input__search label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid skyblue;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.content_name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.input__search input:focus + .label_name .content_name, 
+.input__search input:valid + .label_name .content_name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: skyblue;
+}
+
+.input__search input:focus + .label_name::after,
+.input__search input:valid + .label_name::after {
+    transform: translateX(0%);
+}
