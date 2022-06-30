@@ -1,10 +1,11 @@
 import React from 'react';
 
-import styles from './HeaderTitle.module.css';
+import styles from '../../../styles.module.css';
 
-const HeaderTitle = ({ title }) => {
+const HeaderTitle = ({ title, color }) => {
+    let colorTheme = {color: color};
     return (
-        <div className={styles.header}>
+        <div className={styles.biga83__header} style={colorTheme}>
             <h1>{ title }</h1>
         </div>
     );

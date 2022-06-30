@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './DragAndDropList.module.css';
+import styles from '../../../styles.module.css';
 
 import List from './List/List';
 import ElementList from './ElementList/ElementList';
@@ -14,25 +14,25 @@ const DragAndDropList = ({ dataInitial, dataFinal }) => {
     }
     
     return (
-        <div className={styles.dragdroplist}>
-            <List id="list_1" className={styles.dragdroplist__list}>
+        <div className={styles.biga83__dragdroplist}>
+            <List id="biga83__dad__list_1" className={styles.biga83__dragdroplist__list}>
                 {dataFinal !== null ?
                     result1.map(d => {
-                        return <ElementList id={ d.id } key={ d.id } className={styles.dragdroplist__element} draggable="true" >
+                        return <ElementList id={ d.id } key={ d.id } className={styles.biga83__dragdroplist__element} draggable="true" >
                             { d.nombre }
                         </ElementList>
                     }) :
                     dataInitial.map(d => {
-                        return <ElementList id={ d.id } key={ d.id } className={styles.dragdroplist__element} draggable="true" >
+                        return <ElementList id={ d.id } key={ d.id } className={styles.biga83__dragdroplist__element} draggable="true" >
                             { d.nombre }
                         </ElementList>
                     })
                 }
             </List>
-            <List id="list_2" className={styles.dragdroplist__list}>
+            <List id="biga83__dad__list_2" className={styles.biga83__dragdroplist__list}>
                 {dataFinal !== null ?
                     result2.map(d => {
-                        return <ElementList id={ d.id } key={ d.id } className={styles.dragdroplist__element} draggable="true" >
+                        return <ElementList id={ d.id } key={ d.id } className={styles.biga83__dragdroplist__element} draggable="true" >
                             { d.nombre }
                         </ElementList>
                     }) :

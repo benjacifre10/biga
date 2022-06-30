@@ -3,7 +3,7 @@ import React from 'react';
 const ElementList = (props) => {
 
     const dragStart = (e) => {
-        e.dataTransfer.setData('element_id', e.target.id);
+        e.dataTransfer.setData('biga83__dad__element_id', e.target.id);
     };
 
     const dragOver = (e) => {

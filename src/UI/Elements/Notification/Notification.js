@@ -1,62 +1,62 @@
-import styles from './Notification.module.css';
+import styles from '../../../styles.module.css';
 
 const Notification = ({type = '', message = 'Mensaje', title = '', ubication = ''}) => {
     let div = document.createElement('div');
     let notiClass = [];
-    notiClass.push(styles.notification__container);
+    notiClass.push(styles.biga83__noti__container);
     switch (ubication) {
         case 'ul':
-            notiClass.push(styles.showUpLeft);
+            notiClass.push(styles.biga83__noti__showUpLeft);
             break;
         case 'u':
-            notiClass.push(styles.showUp);
+            notiClass.push(styles.biga83__noti__showUp);
             break;
         case 'ur':
-            notiClass.push(styles.showUpRight);
+            notiClass.push(styles.biga83__noti__showUpRight);
             break;
         case 'r':
-            notiClass.push(styles.showRight);
+            notiClass.push(styles.biga83__noti__showRight);
             break;
         case 'dr':
-            notiClass.push(styles.showDownRight);
+            notiClass.push(styles.biga83__noti__showDownRight);
             break;
         case 'd':
-            notiClass.push(styles.showDown);
+            notiClass.push(styles.biga83__noti__showDown);
             break;
         case 'dl':
-            notiClass.push(styles.showDownLeft);
+            notiClass.push(styles.biga83__noti__showDownLeft);
             break;
         case 'l':
-            notiClass.push(styles.showLeft);
+            notiClass.push(styles.biga83__noti__showLeft);
             break;
         case 'c':
-            notiClass.push(styles.showCenter);
+            notiClass.push(styles.biga83__noti__showCenter);
             break;
         default:
-            notiClass.push(styles.showCenter);
+            notiClass.push(styles.biga83__noti__showCenter);
             break;
     }
     switch (type) {
         case 's':
-            notiClass.push(styles.noti__success);
+            notiClass.push(styles.biga83__noti__success);
             break;
         case 'd':
-            notiClass.push(styles.noti__danger);
+            notiClass.push(styles.biga83__noti__danger);
             break;
         case 'w':
-            notiClass.push(styles.noti__warning);
+            notiClass.push(styles.biga83__noti__warning);
             break;
         case 'i':
-            notiClass.push(styles.noti__info);
+            notiClass.push(styles.biga83__noti__info);
             break;
         case 'y':
-            notiClass.push(styles.noti__system);
+            notiClass.push(styles.biga83__noti__system);
             break;
         case 'b':
-            notiClass.push(styles.noti__black);
+            notiClass.push(styles.biga83__noti__black);
             break;
         default:
-            notiClass.push(styles.noti__default);
+            notiClass.push(styles.biga83__noti__default);
             break;
     }
     div.className = notiClass.join(' ');
@@ -70,11 +70,11 @@ const Notification = ({type = '', message = 'Mensaje', title = '', ubication = '
     });
 
     setTimeout(() => {
-        if (document.querySelector('#notification__container') !== null) {
+        if (document.querySelector('#biga83__noti__container') !== null) {
             div.className = div.className.replace(ubiClass, '');
             div.parentNode.removeChild(div);
         }
-    }, 30000);
+    }, 3000);
 }
 
 export default Notification;

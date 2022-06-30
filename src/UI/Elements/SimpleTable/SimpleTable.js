@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './SimpleTable.module.css';
+import styles from '../../../styles.module.css';
 
 const SimpleTable = ({ data }) => {
     
@@ -11,19 +11,19 @@ const SimpleTable = ({ data }) => {
     });
 
     return (
-        <div className={styles.st__wrapper}>
-            <div className={styles.st__table}>
-                <div className={[styles.st__row, styles.st__header].join(' ')}>
+        <div className={styles.biga83__simpletable__wrapper}>
+            <div className={styles.biga83__simpletable__table}>
+                <div className={[styles.biga83__simpletable__table_row, styles.biga83__simpletable__table_header].join(' ')}>
                     { newHeadersRows.map((h, i) => {
-                        return <div className={styles.st__cell} key={i}>
+                        return <div className={styles.biga83__simpletable__table_row_cell} key={i}>
                             { h }
                         </div>
                     })}
                 </div>
                 {data.map((r, i) => {
-                    return <div className={styles.st__row} key={i}>
+                    return <div className={styles.biga83__simpletable__table_row} key={i}>
                         {Object.values(r).map((cell, i) => {
-                            return <div className={styles.st__cell} key={i} data-title={Object.keys(r)[i].charAt(0).toUpperCase() + Object.keys(r)[i].slice(1)}>
+                            return <div className={styles.biga83__simpletable__table_row_cell} key={i} data-title={Object.keys(r)[i].charAt(0).toUpperCase() + Object.keys(r)[i].slice(1)}>
                                 {cell}
                             </div>
                         })}
